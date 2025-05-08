@@ -324,18 +324,6 @@ const HomePage = () => {
         </motion.div>
       )}
 
-      {menuOpen && (
-        <div className="menu-dropdown">
-          <ul>
-            <li onClick={() => handleNavigation("/")}>🏠 Home</li>
-            <li onClick={() => handleNavigation("/farmplanner")}>📊 Farm Planner</li>
-            <li onClick={() => handleNavigation("/announcements")}>🔔 Notifications</li>
-            <li onClick={() => handleNavigation("/settings")}>⚙️ Settings</li>
-            <li onClick={() => handleNavigation("/login")}>🚪 Logout</li>
-          </ul>
-        </div>
-      )}
-
       {searchQuery && (
         <div className="search-results">
           {filteredProducts.length > 0 ? (
@@ -360,6 +348,17 @@ const HomePage = () => {
           onLoad={() => setFade(true)}
         />
       </div>
+      {menuOpen && (
+        <div className="menu-dropdown">
+          <ul>
+            <li onClick={() => handleNavigation("/")}>🏠 Home</li>
+            <li onClick={() => handleNavigation("/farmplanner")}>📊 Farm Planner</li>
+            <li onClick={() => handleNavigation("/announcements")}>🔔 Notifications</li>
+            <li onClick={() => handleNavigation("/settings")}>⚙️ Settings</li>
+            <li onClick={() => handleNavigation("/login")}>🚪 Logout</li>
+          </ul>
+        </div>
+      )}
 
       <div className="market-insights-container">
         <h2>Market Insights</h2>
